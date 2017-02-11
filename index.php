@@ -11,6 +11,10 @@
 		<p><img alt= "esimene pilt" src="images/pilt.jpg"></p>
 		
 		<h1>The End!!! !!!!</h1>
+		
+		<?php
+			echo phpversion('tidy');
+		?>
 	</body>
 
 </html>
