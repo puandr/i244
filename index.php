@@ -12,9 +12,26 @@
 		
 		<h1>The End!!! !!!!</h1>
 		
-		<?php
-			echo phpversion('tidy');
+		<?php 
+			$host = "localhost";
+			$user = "test";
+			$pass = "t3st3r123";
+			$db = "test";
+
+			$l = mysqli_connect($host, $user, $pass, $db);
+			mysqli_query($l, "SET CHARACTER SET UTF8") or
+					die("Error, ei saa andmebaasi charsetti seatud");
+					
+			
+			$result = mysqli_query($l, "SELECT id, data FROM 10162828_andmed");
+			echo $result->num_rows;
+			
+			mysqli_close($l);
 		?>
+		
+		
+		
+		
 	</body>
 
 </html>
